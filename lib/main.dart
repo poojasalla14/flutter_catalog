@@ -12,19 +12,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers, prefer_const_constructors
     return MaterialApp(
-        //home: const Homepage(),
-        themeMode: ThemeMode.light,
-        theme: ThemeData(
-          brightness: Brightness.light,
-        ),
-        darkTheme: ThemeData(
-          brightness: Brightness.dark,
-        ),
-        routes: {
-          "/" :(context) => const LoginPage(),
-          MyRoute.loginpage: (context) => const LoginPage(),
-          MyRoute.homepage: (context) => const Homepage(),
-        });
+      //home: const HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+
+      routes: {
+        "/": (context) => const LoginPage(),
+        MyRoute.loginpage :(context) => const LoginPage(),
+        MyRoute.homepage :(context) => const HomePage(),
+      },
+    );
   }
 }

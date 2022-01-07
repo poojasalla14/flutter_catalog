@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-  final int a = 5;
-  final String name = 'pooja';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catalog'),
-        centerTitle: true,
+        // ignore: prefer_const_constructors
+        title: Center(child: Text("Catalog")),
       ),
-      body:  Material(
-        child: Center(child: Text("Welcome $a $name")),
+      body: const Material(
+        child: Center(child: Text("Welcome to 1 page of app")),
       ),
-      drawer: const Drawer(backgroundColor: Colors.purple),
+      drawer: const Drawer(
+          backgroundColor: Color.fromARGB(255, 30, 186, 233),
+          child: Text("List")),
     );
   }
 }
